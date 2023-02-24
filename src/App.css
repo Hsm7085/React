@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.btn{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: aqua;
+}
+/* .lan{
+  background-color: aqua;
+} */
