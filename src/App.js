@@ -3,32 +3,25 @@
 import './App.css';
 import React,{Component} from 'react';
 // import Dep from './components/partials';
-import Pro from './components/greet';
-import Lan from './components/chnglan';
+import Counter from './components/greet';
+import Language from './components/chnglan';
 import Pbs from './components/probs';
 import axios from 'axios';
-
-const api=axios.create({
-  baseURL:`https://jsonplaceholder.typicode.com/posts`
-})
+import Type from './components/rendertype';
 
 
  export default class App extends Component{
-  constructor(){
-    super();
-    api.get('/').then(res=>{
-      console.log(res.data)
-    })
-  }
+ 
   
   render(){
     return(
       <div className="App">
       
               <header className="App-header">
-             {/* <Dep/>              */}
-             <Lan/>
-             <Pro />
+            
+              <Type/>
+             <Language/>
+             <Counter />
              <Pbs name="batman">
               <p>Hello this is </p>
              </Pbs>

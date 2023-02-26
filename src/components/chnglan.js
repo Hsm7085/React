@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Hinc from './hin';
 import Engc from './eng';
 
-class Lan extends Component {
+class Language extends Component {
     constructor(){
         super();
         this.state={flag:false}
@@ -24,4 +24,4 @@ class Lan extends Component {
         )
     }
 } 
-export default Lan;
+export default Language;

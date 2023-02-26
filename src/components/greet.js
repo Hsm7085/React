@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 let v=Math.floor(Math.random()*100);
-class Pro extends Component {
+class Counter extends Component {
     constructor(){
         super();
         this.state={count:v}
@@ -48,4 +48,4 @@ class Pro extends Component {
         )
     }
 }
-export default Pro
+export default Counter
