@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-
+import Post from './post';
+import Comment from './comment';
+import User from './user';
 class Type extends Component {
    
     constructor(){
@@ -28,23 +30,28 @@ class Type extends Component {
       
 
     render(){
+        // let button;
+        // if(this.state.type==="posts"){
+        //     button=<Post name={this.state.courses}/>;
+        // }
         return (
         <>
-            {/* <Dep/>              */}
-           
+            
         <div>
         <button onClick={()=>{this.setState({type:"posts"})}} className="btn">Post</button>
-        <button onClick={()=>{this.setState({type:"albums"})}} className="btn">Comment</button>
-        <button onClick={()=>{this.setState({type:"todos"})}} className="btn">Users</button>
+        <button onClick={()=>{this.setState({type:"comments"})}} className="btn">Comment</button>
+        <button onClick={()=>{this.setState({type:"users"})}} className="btn">Users</button>
               
         </div>
-        <table>
+        {/* {button} */}
+        {(this.state.type==="posts")?<Post name={this.state.courses}/>:(this.state.type==="users")?<User name={this.state.courses}/>:<Comment name={this.state.courses}/>}
+        {/* <table>
             { 
             this.state.courses.map(
               course=>
               <tr key={course.id}><td>{course.id}</td><td>{course.title}</td></tr>
               )}
-             </table>
+             </table> */}
         </>
         )
     }
