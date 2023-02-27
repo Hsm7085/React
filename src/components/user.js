@@ -5,6 +5,7 @@ export default class User extends Component{
 render(){
     return(
         <>
+        <h1>Users</h1>
         <table>
         <thead>
                 <th>ID</th>
@@ -13,7 +14,7 @@ render(){
                 <th>EMAIL</th>
                 <th>PHONE</th>
                 <th>WEBSITE</th>
-            </thead>
+         </thead>
             { 
             this.props.name.map(
               course=>

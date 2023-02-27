@@ -30,28 +30,18 @@ class Type extends Component {
       
 
     render(){
-        // let button;
-        // if(this.state.type==="posts"){
-        //     button=<Post name={this.state.courses}/>;
-        // }
+       
         return (
         <>
-            
         <div>
         <button onClick={()=>{this.setState({type:"posts"})}} className="btn">Post</button>
         <button onClick={()=>{this.setState({type:"comments"})}} className="btn">Comment</button>
         <button onClick={()=>{this.setState({type:"users"})}} className="btn">Users</button>
               
         </div>
-        {/* {button} */}
+        
         {(this.state.type==="posts")?<Post name={this.state.courses}/>:(this.state.type==="users")?<User name={this.state.courses}/>:<Comment name={this.state.courses}/>}
-        {/* <table>
-            { 
-            this.state.courses.map(
-              course=>
-              <tr key={course.id}><td>{course.id}</td><td>{course.title}</td></tr>
-              )}
-             </table> */}
+      
         </>
         )
     }

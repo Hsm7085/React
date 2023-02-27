@@ -5,13 +5,14 @@ export default class Comment extends Component{
 render(){
     return(
         <>
+        <h1>Comments</h1>
         <table>
         <thead>
                 <th>ID</th>
                 <th>NAME</th>
                 <th>EMAIL</th>
                 <th>BODY</th>
-            </thead>
+        </thead>
             { 
             this.props.name.map(
               course=>
