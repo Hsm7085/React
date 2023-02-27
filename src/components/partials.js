@@ -21,9 +21,6 @@ const[value,set]=useState(false);
       }
     });
   }
-// function solve(value){
-//  value===1? setCount(function(prevCount){return (prevCount+=1);}): setCount(function(prevCount){return (prevCount-=1);});
-// }
 
   function change(){
     set((prev)=>!prev)

@@ -27,20 +27,24 @@ class Type extends Component {
         })
       }
       }
-      
+      handleDelete=(id)=>{
+        const newCourse=this.state.courses.filter(li=>li.id!==id);
+        console.log(newCourse);
+        this.setState({courses:newCourse});
+      }
 
     render(){
        
         return (
         <>
         <div>
-        <button onClick={()=>{this.setState({type:"posts"})}} className="btn">Post</button>
-        <button onClick={()=>{this.setState({type:"comments"})}} className="btn">Comment</button>
-        <button onClick={()=>{this.setState({type:"users"})}} className="btn">Users</button>
+        <button onClick={()=>{this.setState({type:"posts"})}} className="btnn">Post</button>
+        <button onClick={()=>{this.setState({type:"comments"})}} className="btnn">Comment</button>
+        <button onClick={()=>{this.setState({type:"users"})}} className="btnn">Users</button>
               
         </div>
         
-        {(this.state.type==="posts")?<Post name={this.state.courses}/>:(this.state.type==="users")?<User name={this.state.courses}/>:<Comment name={this.state.courses}/>}
+        {(this.state.type==="posts")?<Post name={this.state.courses} handleDelete={this.handleDelete}/>:(this.state.type==="users")?<User name={this.state.courses} handleDelete={this.handleDelete}/>:<Comment name={this.state.courses} handleDelete={this.handleDelete}/>}
       
         </>
         )

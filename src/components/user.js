@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class User extends Component{
 
@@ -18,7 +18,7 @@ render(){
             { 
             this.props.name.map(
               course=>
-              <tr key={course.id}><td>{course.id}</td><td>{course.name}</td><td>{course.username}</td><td>{course.email}</td><td>{course.phone}</td><td>{course.website}</td></tr>
+              <tr key={course.id}><td>{course.id}</td><td>{course.name}</td><td>{course.username}</td><td>{course.email}</td><td>{course.phone}</td><td>{course.website}</td><td><button className='btn' type='button' onClick={()=>this.props.handleDelete(course.id)}>Delete</button></td></tr>
               )}
              </table>
         </>

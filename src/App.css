@@ -37,11 +37,21 @@
   }
 }
 
-.btn{
+.btnn {
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
   background-color: aqua;
+}
+.btn{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(239, 239, 239);
+}
+
+.btn:hover{
+  background-color: red;
 }
 
 td,tr{

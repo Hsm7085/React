@@ -19,7 +19,7 @@ class Language extends Component {
             <h1>
                 {this.state.flag?<Hinc/>:<Engc/>}
             </h1>
-            <button onClick={()=>this.change()} className="btn">Change</button>
+            <button onClick={()=>this.change()} className="btnn">Change</button>
             </>
         )
     }
