@@ -8,10 +8,10 @@ render(){
         <h1>Comments</h1>
         <table>
         <thead>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>EMAIL</th>
-                <th>BODY</th>
+                <th onClick={()=>this.props.sort('id')}>ID</th>
+                <th onClick={()=>this.props.sort('name')}>NAME</th>
+                <th onClick={()=>this.props.sort('email')}>EMAIL</th>
+                <th onClick={()=>this.props.sort('body')}>BODY</th>
         </thead>
             { 
             this.props.name.map(

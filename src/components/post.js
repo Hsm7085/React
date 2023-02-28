@@ -8,9 +8,9 @@ render(){
         <h1>Posts</h1>
         <table>
             <thead>
-                <th>ID</th>
-                <th>TITLE</th>
-                <th>BODY</th>
+                <th onClick={()=>this.props.sort('id')}>ID</th>
+                <th onClick={()=>this.props.sort('title')}>TITLE</th>
+                <th onClick={()=>this.props.sort('body')}>BODY</th>
             </thead>
             { 
             this.props.name.map(

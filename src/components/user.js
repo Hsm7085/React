@@ -8,12 +8,12 @@ render(){
         <h1>Users</h1>
         <table>
         <thead>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>USERNAME</th>
-                <th>EMAIL</th>
-                <th>PHONE</th>
-                <th>WEBSITE</th>
+                <th onClick={()=>this.props.sort('id')}>ID</th>
+                <th onClick={()=>this.props.sort('name')}>NAME</th>
+                <th onClick={()=>this.props.sort('username')}>USERNAME</th>
+                <th onClick={()=>this.props.sort('email')}>EMAIL</th>
+                <th onClick={()=>this.props.sort('phone')}>PHONE</th>
+                <th onClick={()=>this.props.sort('website')}>WEBSITE</th>
          </thead>
             { 
             this.props.name.map(

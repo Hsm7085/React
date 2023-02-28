@@ -33,6 +33,21 @@ class Type extends Component {
         this.setState({courses:newCourse});
       }
 
+      compareBy = (key) => {
+        return function(a, b) {
+        if (a[key] < b[key]) return -1;
+        if (a[key] > b[key]) return 1;
+        return 0;
+        };
+      };
+       
+      sortBy = (key) => {
+        let arrayCopy = [...this.state.courses];
+        arrayCopy.sort(this.compareBy(key));
+        this.setState({courses: arrayCopy});
+      };
+    
+
     render(){
        
         return (
@@ -44,7 +59,7 @@ class Type extends Component {
               
         </div>
         
-        {(this.state.type==="posts")?<Post name={this.state.courses} handleDelete={this.handleDelete}/>:(this.state.type==="users")?<User name={this.state.courses} handleDelete={this.handleDelete}/>:<Comment name={this.state.courses} handleDelete={this.handleDelete}/>}
+        {(this.state.type==="posts")?<Post name={this.state.courses} handleDelete={this.handleDelete} sort={this.sortBy}/>:(this.state.type==="users")?<User name={this.state.courses} handleDelete={this.handleDelete} sort={this.sortBy}/>:<Comment name={this.state.courses} handleDelete={this.handleDelete} sort={this.sortBy}/>}
       
         </>
         )
