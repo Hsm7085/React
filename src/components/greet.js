@@ -13,11 +13,15 @@ class Counter extends Component {
     render(){
         return (
         <>
+         <div className="App">
+               <header className="App-header">
         <h1>{this.state.count}</h1>
         <div>
         <button onClick={()=>this.solve(1)} className="btnn">Increment</button>
         <button onClick={()=>this.solve(0)} className="btnn">Decrement</button>
         <button onClick={()=>this.solve(2)} className="btnn">Reset</button>
+        </div>
+        </header>
         </div>
         </>
         )

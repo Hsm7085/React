@@ -16,10 +16,14 @@ class Language extends Component {
     render(){
         return (
             <>
+             <div className="App">
+           <header className="App-header">
             <h1>
                 {this.state.flag?<Hinc/>:<Engc/>}
             </h1>
             <button onClick={()=>this.change()} className="btnn">Change</button>
+            </header>
+            </div>
             </>
         )
     }
