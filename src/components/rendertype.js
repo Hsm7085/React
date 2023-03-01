@@ -3,6 +3,8 @@ import axios from 'axios';
 import Post from './post';
 import Comment from './comment';
 import User from './user';
+import Home from './Home';
+let rendertype="";
 class Type extends Component {
    
     constructor(){
@@ -39,13 +41,15 @@ class Type extends Component {
       };
     
       handledata=(type)=>{
-        
+        if(type!==rendertype){
         axios.get(`https://jsonplaceholder.typicode.com/${type}`)
         .then(res=>{
           console.log(res.data)
           this.setState({type:type,
             courses : res.data})
+            rendertype=type;
         })
+      }
       }
 
 
@@ -54,16 +58,16 @@ class Type extends Component {
         return (
         <>
         <div className="App">
-               <header className="App-header">
-        <div>
+        <Home/>
+        <>
         <button onClick={()=>{this.handledata("posts")}} className="btnn">Post</button>
         <button onClick={()=>{this.handledata("comments")}} className="btnn">Comment</button>
         <button onClick={()=>{this.handledata("users")}} className="btnn">Users</button>
               
-        </div>
-        
+        </>
+        <header className="App-header">
         {(this.state.type==="posts")?<Post name={this.state.courses} handleDelete={this.handleDelete} sort={this.sortBy}/>:(this.state.type==="users")?<User name={this.state.courses} handleDelete={this.handleDelete} sort={this.sortBy}/>:(this.state.type==="comments")?<Comment name={this.state.courses} handleDelete={this.handleDelete} sort={this.sortBy}/>:null}
-        </header>
+        </header> 
         </div>
         </>
         )

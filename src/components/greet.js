@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Home from './Home';
 let v=Math.floor(Math.random()*100);
 class Counter extends Component {
     constructor(){
@@ -13,8 +14,11 @@ class Counter extends Component {
     render(){
         return (
         <>
+        
          <div className="App">
+         <Home/>
                <header className="App-header">
+               
         <h1>{this.state.count}</h1>
         <div>
         <button onClick={()=>this.solve(1)} className="btnn">Increment</button>
