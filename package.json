@@ -1,6 +1,22 @@
 {
   "name": "inc-dec",
   "version": "0.1.0",
+  "configurations": [{
+    "type": "node",
+    "request": "launch",
+    "name": "Launch Program",
+    "program": "${workspaceRoot}\\server.js"
+},
+{
+    "type": "node",
+    "request": "launch",
+    "name": "Launch Training Script",
+    "program": "${workspaceRoot}\\training-script.js",
+    "runtimeArgs": [
+        "--max-old-space-size=4096"
+    ]
+}
+],
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
