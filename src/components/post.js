@@ -1,24 +1,25 @@
-import React, { Component } from 'react'
+import React  from 'react'
 
-export default class Post extends Component{
-
-render(){
+export default function Post(props){
     return(
         <>
         <h1>Posts</h1>
         <table>
             <thead>
-                <th onClick={()=>this.props.sort('id')}>ID</th>
-                <th onClick={()=>this.props.sort('title')}>TITLE</th>
-                <th onClick={()=>this.props.sort('body')}>BODY</th>
+                <tr>
+                <th onClick={()=>props.sort('id')}>ID</th>
+                <th onClick={()=>props.sort('title')}>TITLE</th>
+                <th onClick={()=>props.sort('body')}>BODY</th>
+                </tr>
             </thead>
+            <tbody>
             { 
-            this.props.name.map(
+            props.name.map(
               course=>
-              <tr key={course.id}><td>{course.id}</td><td>{course.title}</td><td>{course.body}</td><td><button className='btn' type='button' onClick={()=>this.props.handleDelete(course.id)}>Delete</button></td></tr>
+              <tr key={course.id}><td>{course.id}</td><td>{course.title}</td><td>{course.body}</td><td><button className='btn' type='button' onClick={()=>props.handleDelete(course.id)}>Delete</button></td></tr>
               )}
+              </tbody>
              </table>
         </>
-    )
-}
+    );
 }

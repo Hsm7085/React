@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
-class Engc extends Component{
-    render(){
+import React from 'react'
+export default function Engc(){
+    
 return (
     <>
     I am Himanshu
     </>
 );
 }
-}
-export default Engc;
+

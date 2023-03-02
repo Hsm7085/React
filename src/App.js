@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React from 'react';
 import './App.css';
 import Counter from './components/greet';
 import Language from './components/chnglan';
@@ -6,12 +6,8 @@ import Type from './components/rendertype';
 import { Route, Routes } from "react-router-dom";
 import Home from './components/Home';
 
-
-
- export default class App extends Component{
+ export default function App(){
  
-  
-  render(){
     return(
       <>
       <Routes>
@@ -22,6 +18,6 @@ import Home from './components/Home';
       </Routes>
       </>
     );
-  }
+  
 }
 

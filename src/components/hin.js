@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
-class Hinc extends Component{
-    render(){
+import React from 'react'
+export default function Hinc(){
+    
 return (
     <>
     मेरा नाम हिमांशु है
     </>
 );
+
 }
-}
-export default Hinc;
